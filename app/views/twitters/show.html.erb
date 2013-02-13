@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Zombie:</b>
+  <%= @zombie.twitter.zombie_id %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @zombie.twitter.content %>
+</p>
+
+<p>
+  <b>Tag:</b>
+  <%= @zombie.twitter.tag %>
+</p>
+
+
+<%= link_to 'Edit', edit_zombie_twitter_path(@zombie,twitter) %> |
+<%= link_to 'Back', zombie_twitters_path %>

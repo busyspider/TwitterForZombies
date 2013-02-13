@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  zombie_id: 1
+  content: MyText
+  tag: MyText
+
+two:
+  zombie_id: 1
+  content: MyText
+  tag: MyText
