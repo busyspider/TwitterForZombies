@@ -6,7 +6,7 @@ class TwittersController < ApplicationController
      @zombie = Zombie.find(params[:zombie_id])
   end
     
-  end
+  
   def index
     @twitters = @zombie.twitters
     respond_to do |format|
@@ -81,8 +81,10 @@ class TwittersController < ApplicationController
     @twitter.destroy
 
     respond_to do |format|
-      format.html { redirect_to twitters_url }
+      format.html { redirect_to zombie_twitters_url(@zombie) }
       format.json { head :no_content }
     end
   end
-$end
+
+end
+

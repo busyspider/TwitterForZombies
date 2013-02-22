@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @twitter %> |
-<%= link_to 'Back', twitters_path %>
+<%= link_to 'Show', zombie_twitter_path(@zombie, @twitter) %> |
+<%= link_to 'Back', zombie_twitters_path(@zombie) %>

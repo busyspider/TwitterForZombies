@@ -1,5 +1,11 @@
 <h1>Listing twitters</h1>
 
+<%= form_tag("/search", :method => "get") do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
 <table>
   <tr>
     <th>Zombie</th>
@@ -15,13 +21,16 @@
     <td><%= twitter.zombie_id %></td>
     <td><%= twitter.content %></td>
     <td><%= twitter.tag %></td>
-    <td><%= link_to 'Show', twitter %></td>
-    <td><%= link_to 'Edit', edit_twitter_path(twitter) %></td>
-    <td><%= link_to 'Destroy', twitter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+   
+    <td><%= link_to 'Show', zombie_twitter_path(@zombie,twitter) %></td>
+    <td><%= link_to 'Edit', edit_zombie_twitter_path(@zombie,twitter) %></td>
+    <td><%= link_to 'Destroy', zombie_twitter_path(@zombie,twitter), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+   
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Twitter', new_twitter_path %>
+<%= link_to 'New Twitter', new_zombie_twitter_path(@zombie) %>
